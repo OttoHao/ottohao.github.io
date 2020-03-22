@@ -40,7 +40,8 @@ url: "" # the base hostname & protocol for your site, e.g. http://example.com
 remote_theme: thelehhman/plainwhite-jekyll
 theme: plainwhite
 plugins:
-  - jekyll-feed
+  - jekyll-seo-tag
+  # - jekyll-feed
 
 # Exclude from processing.
 # The following items will not be processed, by default.
