@@ -30,7 +30,7 @@ dotnet new webapi -n JwtAuthDemo
 
 The default `WeatherForecastController` provide a GET api which do not need any authentication yet.
 
-![GetWithoutAuth]({{site.baseurl}}/assets/images/jwtAuthDemo-GetWithoutAuth.PNG)
+![GetWithoutAuth]({{site.baseurl}}/assets/images/aspnetcore-jwt-auth/get-without-auth.png)
 
 ## 2. Authentication Scheme and Handler
 
@@ -152,7 +152,7 @@ var result = await handler.AuthenticateAsync();
 Here is a simple diagram to summarize all the relations.
 
 <p align="center">
-<img src="{{site.baseurl}}/assets/images/AspNetCoreAuthentication.PNG" alt="AspNetCoreAuthentication" width="600"/>
+<img src="{{site.baseurl}}/assets/images/aspnetcore-jwt-auth/aspnetcore-authentication-diagram.png" alt="AspNetCoreAuthentication" width="600"/>
 </p>
 
 ## 4. JWT Authentication Service
@@ -257,12 +257,12 @@ public class JwtAuthController : ControllerBase
 
 Since `Authorize` attribute is added in `WeatherForecastController`, the GET api will return 401 if there is no Bearer authorization header.
 
-![GetWithoutAuth2]({{site.baseurl}}/assets/images/jwtAuthDemo-GetWithoutAuth2.PNG)
+![GetWithoutAuth2]({{site.baseurl}}/assets/images/aspnetcore-jwt-auth/get-without-auth-2.png)
 
 POST username and password to get JWT token.
 
-![PostUserCredToGetToken]({{site.baseurl}}/assets/images/jwtAuthDemo-PostUserCredToGetToken.PNG)
+![PostUserCredToGetToken]({{site.baseurl}}/assets/images/aspnetcore-jwt-auth/post-usercred-to-get-token.png)
 
 Try GET api again with JWT token.
 
-![GetWithAuth]({{site.baseurl}}/assets/images/jwtAuthDemo-GetWithAuth.PNG)
+![GetWithAuth]({{site.baseurl}}/assets/images/aspnetcore-jwt-auth/get-with-auth.png)
